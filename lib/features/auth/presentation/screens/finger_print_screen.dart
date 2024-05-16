@@ -57,7 +57,7 @@ class FingerPrintScreen extends StatelessWidget {
               width: screenWidth / 2,
               child: ElevatedButton(
                 onPressed: () async {
-                  AuthenticationRepository.checkAuthentication().then((val) {
+                  AuthenticationRepository.authenticateUser().then((val) {
                     if (val) {
                       Get.to(
                         const HomeScreen(),
